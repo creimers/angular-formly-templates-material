@@ -5,7 +5,8 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["angular"], factory);
 	else if(typeof exports === 'object')
-		exports["ngFormlyMaterial"] = factory(require("angular"));
+		module.exports = factory(require("angular"));
+		//exports["ngFormlyMaterial"] = factory(require("angular"));
 	else
 		root["ngFormlyMaterial"] = factory(root["angular"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
